@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 
 # Create your models here.
 
+
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
@@ -11,6 +12,7 @@ STATUS = (
 
 class BlogPost(models.Model):
     id = models.AutoField(primary_key=True)
+    Category = models.CharField(max_length=225,default="uradgota")
     image = models.ImageField(upload_to='uploads/')
     masonryimage = models.ImageField(upload_to='uploads/')
     fullview = models.CharField(max_length=225,default="col-lg-3")
