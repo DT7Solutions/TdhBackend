@@ -29,3 +29,26 @@ python manage.py migrate
 
 # Run project or applications
 python manage.py runserver
+
+
+
+when create apis 
+----------------
+1. install - pip install django-cors-headers
+2. INSTALLED_APPS = [
+    # ...
+    'corsheaders',
+    # ...
+]
+
+3.MIDDLEWARE = [
+    # ...
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    # ...
+]
+4.CORS_ALLOW_ALL_ORIGINS = True
+5.CORS_ALLOWED_ORIGINS = [
+    "https://yourfrontendapp.com",
+    "https://anotherfrontendapp.com",
+]

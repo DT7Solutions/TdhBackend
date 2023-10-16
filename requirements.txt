@@ -19,3 +19,5 @@ Werkzeug==2.2.2
 whitenoise==5.2.0
 WTForms==3.0.1
 PyJWT==2.1.0
+django-jazzmin
+django-ckeditor
